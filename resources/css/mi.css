@@ -1,0 +1,70 @@
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: #fff;
+      color: #333;
+      padding: 1rem;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media(min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media(min-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      background-color: #f9f9f9;
+    }
+    .card h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .status-list {
+      list-style: none;
+      padding: 0;
+    }
+    .status-list li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .badge {
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      border: 1px solid transparent;
+    }
+    .green {
+      color: #1a7f37;
+      border-color: #1a7f37;
+    }
+    .yellow {
+      color: #92400e;
+      border-color: #92400e;
+    }
+    .red {
+      color: #b91c1c;
+      border-color: #b91c1c;
+    }

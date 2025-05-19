@@ -4,78 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eitkek_ Dashboard</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background-color: #fff;
-      color: #333;
-      padding: 1rem;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-size: 1.75rem;
-      font-weight: bold;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    @media(min-width: 640px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media(min-width: 1024px) {
-      .grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    .card {
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      background-color: #f9f9f9;
-    }
-    .card h2 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-    .status-list {
-      list-style: none;
-      padding: 0;
-    }
-    .status-list li {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
-    .badge {
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      font-size: 0.875rem;
-      border: 1px solid transparent;
-    }
-    .green {
-      color: #1a7f37;
-      border-color: #1a7f37;
-    }
-    .yellow {
-      color: #92400e;
-      border-color: #92400e;
-    }
-    .red {
-      color: #b91c1c;
-      border-color: #b91c1c;
-    }
-  </style>
+  <link rel="stylesheet" href="resources/css/mi.css" />
 </head>
 <body>
   <header>
@@ -109,73 +38,7 @@
       <p>No active anomalies detected. All nodes stable.</p>
     </div>
   </main>
-
-  <script>
-    const endpoints = [
-      { id: 'wispnet-org', url: 'https://wispnet.org' },
-      { id: 'wisp-wispnet-org', url: 'https://wisp.wispnet.org' },
-      { id: 'wispnet-twingate-com', url: 'https://wispnet.twingate.com' },
-      { id: 'betelchurch-org', url: 'https://betelchurch.org' },
-      { id: 'betelchapel-org', url: 'https://betelchapel.org' },
-      { id: 'eitkek-com', url: 'https://eitkek.com' },
-      { id: 'sherlock-ink', url: 'https://sherlock.ink' }
-    ];
-
-    async function checkStatus(endpoint) {
-      const statusElement = document.getElementById(`status-${endpoint.id}`);
-      try {
-        await fetch(endpoint.url, { method: 'HEAD', mode: 'no-cors' });
-        statusElement.innerHTML = '<span class="badge green">Online</span>';
-      } catch (error) {
-        statusElement.innerHTML = '<span class="badge red">Offline</span>';
-      }
-    }
-
-    function updateStatuses() {
-      endpoints.forEach(endpoint => {
-        checkStatus(endpoint);
-      });
-    }
-
-    updateStatuses();
-    setInterval(updateStatuses, 60000);
-
-    async function fetchNWSWeather() {
-      const lat = 42.0884;
-      const lon = -87.9806;
-
-      try {
-        const pointsResponse = await fetch(`https://api.weather.gov/points/${lat},${lon}`);
-        if (!pointsResponse.ok) throw new Error('Gridpoint lookup failed');
-        const pointsData = await pointsResponse.json();
-        const forecastUrl = pointsData.properties.forecast;
-
-        const forecastResponse = await fetch(forecastUrl);
-        if (!forecastResponse.ok) throw new Error('Forecast fetch failed');
-        const forecastData = await forecastResponse.json();
-
-        const periods = forecastData.properties.periods;
-        if (periods && periods.length >= 2) {
-          const high = periods[0];
-          const low = periods[1];
-
-          document.getElementById('temp-high').textContent = `High: ${high.temperature}°${high.temperatureUnit}`;
-          document.getElementById('temp-low').textContent = `Low: ${low.temperature}°${low.temperatureUnit}`;
-          document.getElementById('conditions').textContent = `Conditions: ${high.shortForecast}`;
-          document.getElementById('wind').textContent = `Wind Speed: ${high.windSpeed}`;
-        } else {
-          document.getElementById('temp-high').textContent = 'High: --';
-          document.getElementById('temp-low').textContent = 'Low: --';
-        }
-
-      } catch (error) {
-        console.error(error);
-        document.getElementById('conditions').textContent = 'Conditions: Unable to fetch data';
-      }
-    }
-
-    fetchNWSWeather();
-  </script>
+  <script type="module" src="resources/js/epi.js"></script>
 
 </body>
 </html>
