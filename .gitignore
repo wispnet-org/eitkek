@@ -1,0 +1,7 @@
+# macOS .gitignore
+.DS_Store
+.DS_Store?
+.ds_store
+*.DS_Store
+*.DS_Store?
+*.ds_store
