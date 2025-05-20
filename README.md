@@ -24,10 +24,14 @@ Deployed for desktop and mobile via static HTML and JavaScript. No backend requi
 - HTML5 / CSS3
 - JavaScript (vanilla)
 - NWS Weather API
+- JSON
 
 ---
 ## 📕 Verse Dashboard
 
-- Verse of the Day API (Unititiated)
+- Verse of the Day via JSON and JavaScript.
+
+***Scripture taken from the New King James Version®. Copyright © 1982 by Thomas Nelson. Used by permission. All rights reserved.***
+
 
 ---
