@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "John 3:16",
+    "text": "For God so loved the world, that he gave his only begotten Son...",
+    "image": "images/john-3-16.jpg"
+  },
+  {
+    "ref": "Psalm 23:1-2",
+    "text": "The Lord is my shepherd; I shall not want.",
+    "image": "./resources/vimgl/vimg-psa-23-1.jpeg"
+  },
+  {
+    "ref": "Proverbs 3:5",
+    "text": "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+    "image": "images/proverbs-3-5.jpg"
+  }
+]

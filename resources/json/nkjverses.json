@@ -1,0 +1,28 @@
+
+[
+  {
+    "ref": "John 3:16",
+    "text": "For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.",
+    "image": "./resources/vimgl/vimg-jhn-3-16.jpeg"
+  },
+{
+  "ref": "Psalm 23:1-2",
+  "text": "The Lord is my shepherd; I shall not want. He makes me to lie down in green pastures;\nHe leads me beside the still waters.",
+  "image": "./resources/vimgl/vimg-psa-23-1.jpeg"
+},
+  {
+    "ref": "Proverbs 3:5",
+    "text": "Trust in the Lord with all your heart, and lean not on your own understanding;",
+    "image": "./resources/vimgl/vimg-prv-3-5.jpeg"
+  },
+  {
+    "ref": "Psalm 89:9",
+    "text": "You rule the raging of the sea; when its waves rise, You still them.",
+    "image": "./resources/vimgl/vimg-psa-89-9.jpeg"
+  }
+  
+]
+
+
+
+
