@@ -5,7 +5,9 @@ const endpoints = [
   { id: 'betelchurch-org', url: 'https://betelchurch.org' },
   { id: 'betelchapel-org', url: 'https://betelchapel.org' },
   { id: 'eitkek-com', url: 'https://eitkek.com' },
-  { id: 'sherlock-ink', url: 'https://sherlock.ink' }
+  { id: 'sherlock-ink', url: 'https://sherlock.ink' },
+  { id: 'greatlakesbiblecamp-com' , url: 'https://greatlakesbiblecamp.com'},
+  { id: 'glbcamp-com' , url: 'https://glbcamp.com'}
 ];
 
 async function checkStatus(endpoint) {
