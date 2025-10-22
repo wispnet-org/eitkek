@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trakcharge - Under Construction</title>
+    <style>
+        body {
+            background-color: #face23;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .caution-border {
+            height: 30px;
+            background-image: repeating-linear-gradient(
+                45deg,
+                black 0,
+                black 15px,
+                #face23 15px,
+                #face23 30px
+            );
+        }
+        header {
+            padding: 40px 20px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 5px;
+            color: #333;
+        }
+
+        .construction-message {
+            margin-top: 60px;
+            font-size: 1.8em;
+            color: #000;
+            animation: blink 1.5s steps(2, start) infinite;
+        }
+
+        @keyframes blink {
+            to {
+                visibility: hidden;
+            }
+        }
+
+        .icon {
+            font-size: 5em;
+            margin-top: 40px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+<div class="caution-border"></div>
+    <header>
+        <h1>Trakcharge</h1>
+        <h2>By eitkek.</h2>
+    </header>
+
+
+    <div class="construction-message">Under Construction</div>
+
+    <footer>
+        &copy; 2025 Trakcharge. All rights reserved.
+    </footer>
+</body>
+</html>
