@@ -111,5 +111,13 @@
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
     }
+  
+  
+    .dailyVerses.bibleVerse {
+      margin-top: .5em;
+  }
 
-    
+  .dailyVerses.bibleVerse a {
+      font-weight: bold;
+  }
+
