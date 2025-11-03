@@ -12,60 +12,100 @@
   <meta name="apple-mobile-web-app-title" content="eitkik" />
   <link rel="manifest" href="./resources/icx/site.webmanifest" />
   <link rel="stylesheet" href="./resources/css/mi.css" />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    header {
+      color: #333;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      justify-items: center;
+    }
+p.indented {
+  margin-top: -40px;
+  font-size: 1.4rem;    /* slightly smaller text */
+  text-indent: 2em;     /* indentation at start of paragraph */
+  line-height: 1.4;     /* optional: improves readability */
+
+  color: #333;          /* optional: keep text color consistent */
+}
+
+    .pdf-box {
+      border: 3px solid #E97132;
+      border-radius: 0; /* square edges */
+      padding: 10px; /* keeps border slightly away from image */
+      background: #fff;
+      display: inline-block;
+    }
+
+    .pdf-box img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+img.limited {
+  max-width: 240px;   /* maximum width */
+  max-height: 240px;  /* maximum height */
+  width: auto;        /* scale proportionally */
+  height: auto;       /* scale proportionally */
+  display: block;     /* removes inline spacing */
+}
+footer {
+  color: #aaa;          /* light gray text */
+  text-align: center;   /* centered text */
+  padding: 1rem;        /* space around text */
+  font-size: 0.9rem;    /* slightly smaller than body text */
+}
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>eitkek_</h1>
   </header>
+<p class="indented">
+  Think more. Do more. Make more.
+</p>
 
-  <main class="grid">
+  <main>
+    <div class="pdf-box">
+      <img class="limited" src="./resources/imgl/1.jpg" alt="Image 1">
 
-     <div class="card">
-      <h2>Verse of the day</h2>
-        <section class="verse-container">
-          <div class="verse-box">
-           <img id="verse-image" src="" alt="Verse image" />
-           <blockquote id="verse-text">Loading...</blockquote>
-           <p id="verse-ref"></p>
-          </div>
-        </section>
-    <small>
-      Scripture taken from the New King James Version®. Copyright © 1982 by Thomas Nelson. Used by permission. All rights reserved.
-    </small>
-    <small>
-      Photos taken by eitkek. Copyright © 2025. All rights reserved.
-    </small>
-</div>
-
-    <div class="card">
-      <h2>Website Status</h2>
-      <ul class="status-list" id="status-list">
-        <li><span>wispnet.org</span><span id="status-wispnet-org"><span class="badge yellow">Checking</span></span></li>
-        <li><span>wisp.wispnet.org</span><span id="status-wisp-wispnet-org"><span class="badge yellow">Checking</span></span></li>
-        <li><span>wispnet.twingate.com</span><span id="status-wispnet-twingate-com"><span class="badge yellow">Checking</span></span></li>
-        <li><span>betelchurch.org</span><span id="status-betelchurch-org"><span class="badge yellow">Checking</span></span></li>
-        <li><span>betelchapel.org</span><span id="status-betelchapel-org"><span class="badge yellow">Checking</span></span></li>
-        <li><span>eitkek.com</span><span id="status-eitkek-com"><span class="badge yellow">Checking</span></span></li>
-        <li><span>sherlock.ink</span><span id="status-sherlock-ink"><span class="badge yellow">Checking</span></span></li>
-        <li><span>greatlakesbiblecamp.com</span><span id="status-greatlakesbiblecamp-com"><span class="badge yellow">Checking</span></span></li>
-        <li><span>glbcamp.com</span><span id="status-glbcamp-com"><span class="badge yellow">Checking</span></span></li>
-      </ul>
     </div>
 
-    <div class="card">
-      <h2>Weather Stats</h2>
-      <p id="temp-high">High: --</p>
-      <p id="temp-low">Low: --</p>
-      <p id="wind">Wind Speed: --</p>
-      <p id="conditions">Conditions: --</p>
-    </div>
+    <div class="pdf-box">
+      <img class="limited" src="./resources/imgl/2.jpg" alt="Image 2">
 
-    <div class="card">
-      <h2>Daily Verse</h2>
-      <p><script async defer src="https://dailyverses.net/get/verse.js?language=nkjv"></script></p>
     </div>
   </main>
-  <script type="module" src="resources/js/epi.js"></script>
+  <footer>
+  &copy; 2025 eitkek. All rights reserved. <br> Project designs are not meant for official use.
+</footer>
 
 </body>
 </html>
