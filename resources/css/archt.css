@@ -1,0 +1,68 @@
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    header {
+      color: #333;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      justify-items: center;
+    }
+p.indented {
+  margin-top: -40px;
+  font-size: 1.4rem;    /* slightly smaller text */
+  text-indent: 2em;     /* indentation at start of paragraph */
+  line-height: 1.4;     /* optional: improves readability */
+
+  color: #333;          /* optional: keep text color consistent */
+}
+
+    .pdf-box {
+      border: 3px solid #E97132;
+      border-radius: 0; /* square edges */
+      padding: 10px; /* keeps border slightly away from image */
+      background: #fff;
+      display: inline-block;
+    }
+
+    .pdf-box img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+img.limited {
+  max-width: 240px;   /* maximum width */
+  max-height: 240px;  /* maximum height */
+  width: auto;        /* scale proportionally */
+  height: auto;       /* scale proportionally */
+  display: block;     /* removes inline spacing */
+}
+footer {
+  color: #aaa;          /* light gray text */
+  text-align: center;   /* centered text */
+  padding: 1rem;        /* space around text */
+  font-size: 0.9rem;    /* slightly smaller than body text */
+}
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }

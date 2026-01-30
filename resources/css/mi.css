@@ -41,6 +41,18 @@
       font-weight: 600;
       margin-bottom: 0.75rem;
     }
+    .darkcard {
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      background-color: black;
+    }
+    .darkcard h2 {
+      color: #f9f9f9;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
     .status-list {
       list-style: none;
       padding: 0;
