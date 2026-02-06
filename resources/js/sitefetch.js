@@ -7,7 +7,10 @@ const endpoints = [
   { id: 'eitkek-com', url: 'https://eitkek.com' },
   { id: 'sherlock-ink', url: 'https://sherlock.ink' },
   { id: 'greatlakesbiblecamp-com' , url: 'https://greatlakesbiblecamp.com'},
-  { id: 'glbcamp-com' , url: 'https://glbcamp.com'}
+  { id: 'glbcamp-com' , url: 'https://glbcamp.com'},
+  { id: 'hamshed-com' , url: 'https://hamshed.com'},
+  { id: 'radshed-com' , url: 'https://radshed.com'},
+
 ];
 
 async function checkStatus(endpoint) {
