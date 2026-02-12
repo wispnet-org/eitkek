@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Glitch Page</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Courier New', monospace;
+      color: #fff;
+    }
+
+    .symbol {
+      position: relative;
+      font-size: 25rem;
+      font-weight: bold;
+      color: black;
+      text-shadow:
+        2px 0 #face23,
+        -2px 0 #f4f4f4;
+      animation: glitch 2s infinite;
+      user-select: none;
+    }
+
+    .message {
+      font-size: 2rem;
+      color: #f4f4f4f4;
+      margin-top: 1rem;
+      letter-spacing: 2px;
+      animation: flicker 3s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 #face23, -2px 0 #f4f4f4; transform: translate(0); }
+      20% { text-shadow: -2px 0 #face23, 2px 0 #f4f4f4; transform: translate(-2px, 2px); }
+      40% { text-shadow: 2px 2px #FFFF00, -2px -2px #f4f4f4; transform: translate(2px, -2px); }
+      60% { text-shadow: -2px -2px #f4f4f4 2px 2px #f4f4f4; transform: translate(-1px, 1px); }
+      80% { text-shadow: 2px 0 #f4f4f4 -2px 0 #face23; transform: translate(1px, -1px); }
+      100% { text-shadow: 2px 0 #face23, -2px 0 #face23; transform: translate(0); }
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+  <div class="symbol" id="glitchSymbol">⚠</div>
+  <div class="message">404 — PAGE NOT FOUND</div>
+</body>
+</html>
