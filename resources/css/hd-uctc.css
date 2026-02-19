@@ -1,0 +1,53 @@
+/* Trakcharge Header Section Styles */
+/* [Hotel Delta] */
+
+
+ .stripe-bar{
+            height: 30px;
+            background-image: repeating-linear-gradient(
+                45deg,
+                black 0,
+                black 15px,
+                #face23 15px,
+                #face23 30px
+            );
+        }
+
+
+    .header header{
+      text-align:center;
+      padding: 12px;
+    }
+
+
+    .header .tagline-strong{
+      font-weight:700;
+      margin: 12px 0 6px;
+      font-size: clamp(16px, 2.1vw, 22px);
+      color:var(--black);
+    }
+    .header .tagline{
+      margin:0 0 22px;
+      font-size: clamp(18px, 2.6vw, 28px);
+      color:var(--text);
+      font-weight:300;
+    }
+    .header .brand{
+      font-family: "Anton", Impact, sans-serif;
+      font-size: clamp(36px, 6.2vw, 96px);
+      letter-spacing: 2px;
+      color:var(--black);
+      line-height:0.9;
+      margin: 0 0 8px;
+    }
+    
+
+    .header html,body{
+      height:100%;
+      margin:0;
+      font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--yellow);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }

@@ -1,4 +1,16 @@
-        body {
+/* Trakcharge Main Styles */
+/* [Alpha Alpha] */
+
+ :root{
+      --yellow:#face23;
+      --black:#0b0b0b;
+      --text:#111;
+      --muted: rgba(0,0,0,0.65);
+      --max-width:1100px;
+    }
+
+
+body {
             background-color: #face23;
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
@@ -29,7 +41,7 @@
         h2 {
             font-size: 1.5em;
             margin-top: 5px;
-            color: #333;
+            color: #000000;
         }
 
         .construction-message {
@@ -50,8 +62,15 @@
             margin-top: 40px;
         }
 
-        footer {
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #444;
-        }
+.hidden {
+display: none;
+}
+
+.avl {
+display: block;
+}
+
+  .sl {
+    border-bottom: 2px solid black;
+    margin: 20px 0; /* Optional: add space above and below */
+  }

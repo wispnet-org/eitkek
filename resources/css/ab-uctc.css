@@ -1,31 +1,34 @@
-    .hero {
+/* Trakcharge About Page Styles */
+/* [Alpha Bravo] */
+
+.about .hero {
       text-align: center;
     }
 
-    .hero h1 {
+    .about .hero h1 {
       font-family: 'Courier New', Courier, monospace;
       font-weight: lighter;
     }
-    .features {
+    .about .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
     }
-    .cta {
+    .about .cta {
       text-align: center;
     }
 
-.features {
+.about .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
 }
 
-.feature {
+.about .feature {
   text-align: center;
 }
 
-.feature-image {
+.about .feature-image {
   width: 50%;
   height: 200px;
   overflow: hidden;
@@ -33,7 +36,7 @@
 }
 
 
-.feature-image img {
+.about .feature-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;          /* MAGIC */
