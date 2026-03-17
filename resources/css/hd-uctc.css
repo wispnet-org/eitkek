@@ -1,7 +1,11 @@
 /* Trakcharge Header Section Styles */
 /* [Hotel Delta] */
 
-
+h1 img {
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
+/* NSM */
  .stripe-bar{
             height: 30px;
             background-image: repeating-linear-gradient(
