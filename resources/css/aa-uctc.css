@@ -74,3 +74,16 @@ display: block;
     border-bottom: 2px solid black;
     margin: 20px 0; /* Optional: add space above and below */
   }
+
+.dl {
+  height: 1px;
+  width: 91%;
+  margin: 15px auto;
+  background: repeating-linear-gradient(
+    to right,
+    #000,
+    #000 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}

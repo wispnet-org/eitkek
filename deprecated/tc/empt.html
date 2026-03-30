@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+
+<div class="main">
+<section id="Header" class="header avl">
+  <div class="stripe-bar" aria-hidden="true"></div>
+    <header>
+      <h1 id="title" class="brand">
+        <img src="" alt="COMPANY" width="auto" height="275">
+      </h1>
+      <div class="tagline-strong">Header</div>
+      <p class="tagline">Tagline.</p>
+    </header>
+</section>
+
+  <nav>
+    <a href="javascript:void(0)" onclick="showSection('main')">Home</a>
+    <a href="javascript:void(0)" onclick="showSection('about')">About Us</a>
+    <!-- <a href="javascript:void(0)" onclick="showSection('product')">Our Vision</a> -->
+        <a href="javascript:void(0)" onclick="showSection('goof')">Help Us Out!</a>
+  </nav>
+<div class="sl"></div>
+<section id="main">
+      <section class="features" aria-label="Key features">
+      <article class="feature" aria-labelledby="f1">
+
+        <div class="content">
+
+      <article class="feature" aria-labelledby="f2">
+
+        <div class="content">
+          <h3 id="f2">Header</h3>
+          <p>Content</p>
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <article class="feature" aria-labelledby="f3">
+
+        <div class="content">
+          <h3 id="f3">Header</h3>
+          <p>Content</p>
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <article class="feature" aria-labelledby="f4">
+
+        <div class="content">
+          <h3 id="f4">Why us?</h3>
+          <p>This is why.</p>
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+      </article>
+    </section>
+</section>
+<section id="goof" class="hidden">
+<!-- Google form here -->
+</section>
+
+<section id="about" class="hidden">
+
+  <div class="about-text">
+
+    <p>About us</p>
+  </div>
+
+  <div class="about-team">
+    <h2>Meet the Team</h2>
+    <div class="features">
+
+      <div class="feature">
+        <h3>name</h3>
+        <div class="feature-image">
+          <img src="" alt="Picture">
+        </div>
+        <p>creator</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+</div>
+
+<div class="sl"></div>
+<footer>
+&copy Company 2026. <br>
+<small>Link.</small>
+</footer>
+<div class="stripe-bar" aria-hidden="true"></div>
+</body>
+
+<script>
+  function showSection(sectionId) {
+    // Hide ALL content sections
+    document.querySelectorAll('.content-section').forEach(section => {
+      section.classList.add('hidden');
+    });
+
+    // Show the requested one
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.classList.remove('hidden');
+    }
+  }
+
+  // Show "Home" section when page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    showSection('main');
+  });
+</script>
+</html>
