@@ -6,6 +6,8 @@ A minimal, responsive web-based dashboard that displays:
 - **Live Website Statuses** for multiple domains;
 - **Current Weather Forecast** from the National Weather Service (NWS);
 - **Calculated Conditions and Solar-Terrestrial Data** from **hamsql.com**.
+- **Matrix Rain** widget because why not.
+
 
 
 ## Features
