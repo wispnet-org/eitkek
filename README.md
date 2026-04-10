@@ -1,6 +1,6 @@
 # eitkek_ Dashboard
 
-A minimal, responsive web-based dashboard that displays:
+### A minimal web-based dashboard that displays:
 
 - A **Verse of the Day** widget*;
 - **Live Website Statuses** for multiple domains;
@@ -8,17 +8,6 @@ A minimal, responsive web-based dashboard that displays:
 - **Calculated Conditions and Solar-Terrestrial Data** from **hamsql.com**.
 - **Matrix Rain** widget because why not.
 
-
-
-## Features
-
-- **Real-Time Site Status** checks.
-- **U.S. Weather Forecasts** pulled dynamically from the National Weather Service.
-- **Responsive Layout** using a CSS grid system.
-- **Integrated Radio Propagation** condition statistics courtesy of **hamqsl.com**.
-- **Verse of the Day** widget with a simple rotating lineup of verses.
-
-
-**Scripture taken from the New King James Version®. Copyright © 1982 by Thomas Nelson. Used by permission. All rights reserved.* 
+<small>**Scripture taken from the New King James Version®. Copyright © 1982 by Thomas Nelson. Used by permission. All rights reserved.* </small>
 
 
