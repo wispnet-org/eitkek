@@ -20,7 +20,7 @@
 
   <main class="grid">
 
-     <div class="card">
+     <div class="card" data-widgetid="Verse">
       <h2>Verse of the day</h2>
         <section class="verse-container">
           <div class="verse-box">
@@ -38,7 +38,7 @@
     </small></small>
 </div>
 
-    <div class="card">
+    <div class="card" data-widgetid="Status">
       <h2>Website Status</h2>
       <ul class="status-list" id="status-list">
         <li><span><a href="https://wispnet.org">wispnet.org</a></span><span id="status-wispnet-org"><span class="badge yellow">Checking</span></span></li>
@@ -58,15 +58,16 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card" data-widgetid="Temp">
       <h2>Weather Stats</h2>
-      <p id="temp-high">High: --</p>
-      <p id="temp-low">Low: --</p>
+      <p id="temp-high">Low: --</p>
+      <p id="temp-low">High: --</p>
       <p id="wind">Wind Speed: --</p>
       <p id="conditions">Conditions: --</p>
+      <p><small><small>Source: National Weather Service</small></small></p>
     </div>
 
-    <div class="darkcard">
+    <div class="darkcard" data-widgetid="Radio">
       <h2>Radio Propagation Stats</h2>
         <center>
         <a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solarbc.php"></a>
@@ -74,13 +75,108 @@
         <script type="module" src="resources/js/epi.js"></script>
       </div>
 
-<div class="card, matrix-card">
+      <div class="card card-svg" data-widgetid="WaveSVG">
+
+    <svg id="topoSVG" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      
+<script>
+(function () {
+  const svg = document.getElementById('topoSVG');
+  if (!svg) return;
+
+  const width = 800;
+  const height = 600;
+  const layers = 20;
+  const spacing = 25;
+  const paths = [];
+  let offset = 0;
+  let fadeStartTime = null;
+  const fadeDuration = 10000;
+  let fadeInProgress = false;
+
+  function createPaths() {
+    for (let i = 0; i < layers; i++) {
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      svg.appendChild(path);
+      paths.push(path);
+    }
+  }
+
+  function updatePaths(offset) {
+    for (let i = 0; i < layers; i++) {
+      const layerOffset = i * spacing;
+      let d = "M 0 " + (layerOffset + 100);
+
+      for (let x = 0; x <= width; x += 10) {
+        const y =
+          layerOffset +
+          100 +
+          Math.sin((x + offset + i * 30) * 0.01) * 35 +
+          Math.cos((x + offset + i * 15) * 0.005) * 15;
+        d += " L " + x + " " + y;
+      }
+
+      paths[i].setAttribute("d", d);
+    }
+  }
+
+  function startFadeOut() {
+    paths.forEach((path) => {
+      path.style.opacity = '0';
+    });
+  }
+
+  function resetPaths() {
+    paths.forEach((path) => {
+      path.style.opacity = '0.6';
+    });
+    offset = 0;
+  }
+
+  function animate(currentTime) {
+    if (!fadeStartTime) {
+      fadeStartTime = currentTime;
+    }
+
+    offset += 0.5;
+
+    if (offset > width) {
+      offset = -width;
+    }
+
+    updatePaths(offset);
+
+    if (currentTime - fadeStartTime > fadeDuration && !fadeInProgress) {
+      fadeInProgress = true;
+      startFadeOut();
+
+      setTimeout(() => {
+        resetPaths();
+        fadeStartTime = null;
+        fadeInProgress = false;
+      }, 3000);
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  createPaths();
+  requestAnimationFrame(animate);
+})();
+</script>
+      </svg>
+        <h2 class="wt ot">Upcoming Net</h2>
+      <div class="ct">
+        <div class="cti ot wt bt">
+          <p>1<sup>st</sup> Teusday, Monthly</p>
+          <p>[TBD]MHz </p>
+          <p>6:00 PM / 1800hrs </p>
+        </div>
+      </div>
+    </div>
+<div class="card, matrix-card" data-widgetid="Matrix">
   <canvas id="matrix-canvas" width="380" height="480"></canvas>
-  <script src="resources/js/matrix.js"></script>
+  <script src="resources/js/matrix.js" defer></script>
 </div>
-
-
-
-
 </body>
 </html>

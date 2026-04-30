@@ -2,7 +2,7 @@
       margin: 0;
       font-family: system-ui, sans-serif;
       background-color: #fff;
-      color: #333;
+      color: #333333;
       padding: 1rem;
     }
     header {
@@ -42,11 +42,38 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       padding: 1.5rem;
       background-color: #f9f9f9;
+      position: relative;
+      overflow: hidden;
     }
     .card h2 {
       font-size: 1.125rem;
       font-weight: 600;
       margin-bottom: 0.75rem;
+      z-index: 10;
+    }
+    .bt {
+      font-size: 1.25rem;
+      font-weight: 100;
+    }
+    .ct {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      pointer-events: none;
+}
+.ct-i {
+  text-align: center;
+}
+.ot {
+  display: block;   /* default anyway */
+  position: relative; /* IMPORTANT: not absolute */
+  margin: 0;
+}
+    .wt {
+      color: #f9f9f9
     }
     .darkcard {
       border-radius: 1rem;
@@ -66,12 +93,32 @@
       position: relative;
       border: 1px solid #0a0;
       box-shadow: 0 8px 25px rgba(0, 255, 0, 0.1);
-      aspect-ratio: 100 / 85; /* Keeps proportions consistent */
+      aspect-ratio: 100 / 85;
     }
     .matrix-card canvas {
       display: block;
       width: 100%;
       height: 100%;
+    }
+    #topoSVG {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 0;
+      pointer-events: none;
+      background: #333333;
+}
+    #topoSVG path {
+            fill: none;
+            stroke: #f6c177; /* Soft gold */
+            stroke-width: 1.2;
+            opacity: 0.6;
+            transition: opacity 3s ease-out; /* Fade-out transition */
+          }
+    .card-svg {
+      aspect-ratio: 100 / 85;
     }
     .status-list {
       list-style: none;

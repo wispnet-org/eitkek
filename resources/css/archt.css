@@ -3,11 +3,11 @@
       margin: 0;
       padding: 0;
       background: #fff;
-      color: #333;
+      color: #333333;
     }
 
     header {
-      color: #333;
+      color: #333333;
       padding: 1rem;
       text-align: center;
     }
@@ -30,7 +30,7 @@ p.indented {
   text-indent: 2em;     /* indentation at start of paragraph */
   line-height: 1.4;     /* optional: improves readability */
 
-  color: #333;          /* optional: keep text color consistent */
+  color: #333333;          /* optional: keep text color consistent */
 }
 
     .pdf-box {
